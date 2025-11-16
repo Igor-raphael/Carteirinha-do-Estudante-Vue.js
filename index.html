@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="central">
+
+        <div id="formulario">
+
+        </div>
+
+        <div id="previa">
+
+        </div>
+
+
+    </div>
+    
+
+    <!--importamos o vue, da cdn unpkg.com-->  
+    <script src="https://unpkg.com/vue@3.0.0-rc.5/dist/vue.global.js"></script>
+
+    <!-- Abrimos um bloco de script local para trabalharmos com o Vue.js -->
+    <script>
+
+        //Criamos uma vue instance (um app)
+        Vue.createApp({
+
+            //dizemos quais dados esse app gerencia
+            //data é uma função, 
+            data(){
+                //retorna Objeto (JSON)
+                return {
+                    //nome e matricula inicialmente são Strings (textos) em brancos ""
+                  nome:"",
+                  matricula:"",
+
+                }
+            }
+
+            //dizemos onde em nosso html o vue irá viver, neste caso no bloco HTML com id central
+        }).mount('#central')
+
+    </script>
+</body>
+</html>
