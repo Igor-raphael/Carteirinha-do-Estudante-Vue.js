@@ -41,7 +41,7 @@
             
             <div id="cartao">
 
-                <div id="foto-perfil" v-model="img" :style="{backgroundImage:`url(${foto})`}"></div>
+                <div id="foto-perfil" :style="{backgroundImage:`url(${foto})`}"></div>
 
                 <div id="dados-cartao">
 
@@ -67,13 +67,10 @@
             
     </div>
 
-    <!--importamos o vue, da cdn unpkg.com-->  
     <script src="https://unpkg.com/vue@3.0.0-rc.5/dist/vue.global.js"></script>
 
-    <!-- Abrimos um bloco de script local para trabalharmos com o Vue.js -->
     <script>
 
-        //Criamos uma vue instance (um app)
         Vue.createApp({
 
             methods: {
@@ -86,7 +83,7 @@
                 liberado(){
                     let liberado = false;
 
-                    if(!(nome === "" || matricula === "" || img === null)){
+                    if(!(this.nome === "" || this.matricula === "" || this.foto === null)){
                          liberado = true;
                     }
 
@@ -95,12 +92,10 @@
 
             },
 
-            //dizemos quais dados esse app gerencia
-            //data é uma função, 
             data(){
-                //retorna Objeto (JSON)
+                
                 return {
-                    //nome e matricula inicialmente são Strings (textos) em brancos ""
+                    
                   nome:"",
                   matricula:"",
                   img:null,
@@ -111,7 +106,6 @@
                 }
             }
 
-            //dizemos onde em nosso html o vue irá viver, neste caso no bloco HTML com id central
         }).mount('#wrapper')
 
     </script>
