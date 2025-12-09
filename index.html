@@ -30,7 +30,7 @@
                     <input type="file" @change="onFileChange">
                     <img v-if="foto" :src="foto" alt="Prévia" style="width: 120px; height: 120px;">
 
-                <button class="btn-submit" @click="done = true">Enviar</button>
+                <button class="btn-submit" @click="done = true" :disabled="!liberado()">Enviar</button>
             
             </div>
         
@@ -41,7 +41,7 @@
             
             <div id="cartao">
 
-                <div id="foto-perfil" :style="{backgroundImage:`url(${foto})`}"></div>
+                <div id="foto-perfil" v-model="img" :style="{backgroundImage:`url(${foto})`}"></div>
 
                 <div id="dados-cartao">
 
@@ -81,6 +81,16 @@
                     const file = event.target.files[0];
                     if (!file) return;
                     this.foto = URL.createObjectURL(file);
+                },
+
+                liberado(){
+                    let liberado = false;
+
+                    if(!(nome === "" || matricula === "" || img === null)){
+                         liberado = true;
+                    }
+
+                    return liberado;
                 }
 
             },
@@ -93,8 +103,10 @@
                     //nome e matricula inicialmente são Strings (textos) em brancos ""
                   nome:"",
                   matricula:"",
+                  img:null,
                   done: false,
-                  foto: null
+                  foto: null,
+                  
 
                 }
             }
