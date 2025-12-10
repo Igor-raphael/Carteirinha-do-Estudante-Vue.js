@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="shortcut icon" href="assets/favicon.ico"> 
+
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/web-app-manifest-512x512.png">
+
+
     <title>Start</title>
 </head>
 <body>
 
     <div id="wrapper">
 
-            <h1 v-if="!done">START - Carteirinha do Estudante </h1>
+            <h1 v-if="!done"> <strong class="start">START</strong> <br> Carteirinha do Estudante </h1>
 
             
         <div id="central" >
@@ -37,7 +52,7 @@
         
             <div id="previa" v-if="done">
 
-                <h1>START</h1>
+                <h1 class="start">START</h1>
             
             <div id="cartao">
 
@@ -98,7 +113,6 @@
                     
                   nome:"",
                   matricula:"",
-                  img:null,
                   done: false,
                   foto: null,
                   

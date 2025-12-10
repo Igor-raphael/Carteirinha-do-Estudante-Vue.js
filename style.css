@@ -25,14 +25,19 @@ body{
     height: 100vh;
 
     h1{
-        font-size: clamp(26px, 3vh, 36px);
+        font-size: clamp(20px, 2vw, 28px);
         text-align: center;
         color: #fff;
-        text-shadow: 
-        0 2px 4px rgba(0,0,0,0.5),
-        0 5px 15px rgba(0,0,0,0.8);
         font-weight: 600;
+
     }
+
+}
+
+.start{
+    font-size: clamp(30px, 3vw, 38px);
+    color: #FAD777;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 #central{
@@ -59,9 +64,11 @@ body{
     flex-direction: column;
     margin: 0 auto;
     gap: 0.6rem;
+    width: 100%;
 
     p{
-        font-size: clamp(22px, 2vw, 30px);
+        text-align: center;
+        font-size: clamp(22px, 2vw, 34px);
     }
 
     label{
