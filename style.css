@@ -132,8 +132,8 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 45vh;
+            width: 260px;
+            height: 300px;
             border-radius: 100px;
             margin: 40px auto;
             box-shadow:
