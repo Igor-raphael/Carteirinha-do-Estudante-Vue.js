@@ -5,10 +5,13 @@
 }
 
 body{
-    background: linear-gradient(135deg, #2b2b52, #4b79a1, #283e51);
+    background: #5096f1;
     background-size: 150% 150%;
-    animation: bgmove 12s ease infinite;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    animation: bgmove 18s linear infinite;
     background-image: url(assets/fundo.webp);
+
 }
 
 @keyframes bgmove{
@@ -28,7 +31,7 @@ body{
     h1{
         font-size: clamp(20px, 5vw, 32px);
         text-align: center;
-        color: #fff;
+        color: #807f7f;
         font-weight: 600;
 
     }
@@ -51,7 +54,6 @@ body{
     height: auto;
     padding: 2rem 1rem;
     border-radius: 15px;
-    overflow: auto;
     box-sizing: border-box;
 
     background: rgba(255,255,255, 0.10);
@@ -218,10 +220,6 @@ body{
 }
 
 @media(min-width: 1280px){
-
-    #central{
-        width: 50%;
-    }
 
     #formulario{
         width: 65%;
