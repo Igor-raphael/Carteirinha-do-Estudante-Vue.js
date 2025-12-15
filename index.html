@@ -42,7 +42,7 @@
 
                 
                     <label for="foto">Adicione uma foto*: </label>
-                    <input type="file" @change="onFileChange">
+                    <input type="file" accept="image/png, image/jpeg, image/webp" @change="onFileChange">
                     <img v-if="foto" :src="foto" alt="Prévia" style="width: 70px; height: 70px;">
 
                 <button class="btn-submit" @click="done = true" :disabled="!liberado()">Enviar</button>
